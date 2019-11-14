@@ -1,0 +1,56 @@
+Cara mengisi record kedatabase ada 2 cara :
+
+- insert into customer values (data1, data2, data3);
+
+- insert into customer (field1, field2, field3) values (data1, data2,data3);
+
+
+Mengkoneksi PHP Ke Database MySQL
+
+- Koneksi MySQL dengan mysql extension (versi PHP5 Kebawah)
+
+	$var = mysql_connect("nama_server","user_id","password");
+
+- Koneksi MySQL dengan Mysqli extension
+
+	$var = mysqli_connect("nama_server","user_id","password","nama_database");
+
+- Koneksi Mysql dengan PDO (PHP data Object)
+
+	$pdo = new PDO('mysql:host=localhost;dbname=database_name')
+
+
+Menjalankan Query
+
+<?php
+
+	$konek = mysqli_connect("localhost","root","","biodata");
+	$result = $konek->query("SELECT * FROM biodata");
+
+
+Contoh :
+
+<?php
+
+	$koneksi = mysqli_connect('localhost','root','','penjualan');
+	if(!$koneksi){
+
+		die("koneksi gagal : " . mysql_connect_error());
+
+	}
+
+	$mysql = "select * from customer";
+	$hasil = $koneksi -> query($mysql);
+	$n = 0;
+	while($row=mysqli_fetch_array($hasil, MYSQLI_ASSOC)){
+
+		$n++;
+		echo $n." ".$row['customer_id']." ".$row['customer_nama'];
+		echo "<br />";
+
+	}
+
+	mysqli_close($koneksi);
+
+?>
+
