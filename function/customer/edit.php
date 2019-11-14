@@ -1,6 +1,6 @@
 <?php 
 
-	include '../koneksi/koneksi.php';
+	include '../../koneksi/koneksi.php';
 
 	$id = $_GET['id'];
 	$nama = $_POST['nama'];
@@ -14,7 +14,7 @@
 
 	if($result){
 
-		header("Location: http://localhost/AndikaKurniawan/PHPDasar/Hari-5/customer/main.php");
+		header("Location: http://localhost/AndikaKurniawan/PHPDasar/Hari-5/main/customer/index.php");
 
 	}else {
 

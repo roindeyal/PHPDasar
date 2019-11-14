@@ -1,6 +1,6 @@
 <?php
 
-	include '../koneksi/koneksi.php';
+	include '../../koneksi/koneksi.php';
 
 	$nama = $_POST['nama'];
 	$alamat = $_POST['alamat'];
@@ -12,7 +12,7 @@
 
 	if($result){
 
-		header("Location: http://localhost/AndikaKurniawan/PHPDasar/Hari-5/customer/main.php");
+		header("Location: http://localhost/AndikaKurniawan/PHPDasar/Hari-5/main/customer/index.php");
 
 	}else {
 

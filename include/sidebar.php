@@ -5,9 +5,9 @@
       MENU LAYANAN</h6>
       <a href="#" class="list-group-item list-group-item-action"> Dashboard</a>
     
-      <a href="../customer/main.php" class="list-group-item list-group-item-action">Customer</a>
+      <a href="../customer/index.php" class="list-group-item list-group-item-action">Customer</a>
       
-      <a href="#" class="list-group-item list-group-item-action">Barang</a>
+      <a href="../barang/index.php" class="list-group-item list-group-item-action">Barang</a>
       
       <a href="#" class="list-group-item list-group-item-action">Report</a>
 

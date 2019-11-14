@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 <?php
-	include '../koneksi/koneksi.php';
-	include '../include/navbar.php';
+	include '../../koneksi/koneksi.php';
+	include '../../include/navbar.php';
 
 	$id = $_GET['id'];
 
@@ -23,12 +23,12 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3" style="margin-top:80px;">
-			<?php include '../include/sidebar.php' ?>
+			<?php include '../../include/sidebar.php' ?>
 		</div>
 		<div class="col-sm-8" style="margin-top:50px;">
 			<p class="h5 mt-5 text-danger">UPDATE CUSTOMER</p>
 			<div class="container">
-				<form name="form-action-update" action="../function/edit.php?id=<?= $id; ?>" method="POST">
+				<form name="form-action-update" action="../../function/customer/edit.php?id=<?= $id; ?>" method="POST">
 				 	<div class="form-group">
 				 		<label for="nama">Nama</label>
 				 		<input type="text" class="form-control" name="nama" placeholder="Nama..." id="nama" value="<?= $nama ?>">
@@ -43,17 +43,17 @@
 				 	</div>
 				 	<div class="form-group">
 				 		<label for="telepon">Kode Jenis</label>
-						<select class="form-control">
+						<select class="form-control" name="kode_customer">
 
 							<?php for($i = 0; $i < count($jeniskode) ; $i++) :?>
 
 								<?php if ($jeniskode[$kodejenis] == $jeniskode[$i]): ?>
 
-									<option value="$kodejenis" selected><?= $jeniskode[$i] ?></option>
+									<option value="<?= $kodejenis ?>" selected><?= $jeniskode[$i] ?></option>
 
 								<?php else : ?>
 
-									<option value="$i"><?= $jeniskode[$i] ?></option>
+									<option value="<?= $i ?>"><?= $jeniskode[$i] ?></option>
 
 								<?php endif; ?>
 

@@ -1,8 +1,8 @@
 <?php
 
-	include '../include/header.php';
-	include '../koneksi/koneksi.php';
-	include '../include/navbar.php';
+	include '../../include/header.php';
+	include '../../koneksi/koneksi.php';
+	include '../../include/navbar.php';
 
 	$result = $koneksi->query("SELECT * FROM customer");
 
@@ -14,11 +14,11 @@
 <div class="container-fluid" style="margin-top:60px;">
 	<div class="row">
 		<div class="col-sm-3" style="margin-top:40px;">
-			<?php include '../include/sidebar.php'; ?>
+			<?php include '../../include/sidebar.php'; ?>
 		</div>
 		<div class="col-sm-9">
 			<p class="h5 mt-5 text-danger">DAFTAR CUSTOMER</p>
-			<a href="../action/action_plus.php" class="btn btn-secondary btn-sm"><i class="fas fa-user-plus"></i> Tambah Customer</a>
+			<a href="../../action/customer/action_plus.php" class="btn btn-secondary btn-sm"><i class="fas fa-user-plus"></i> Tambah Customer</a>
 			<form name="crud" method="GET">
 				<table class="table table-sm">
 				<tr>
@@ -40,7 +40,7 @@
 						<td><?= $sult['customer_tgl']?></td>
 						<td><?= $jeniskode[$sult['kode_jenis']]?></td>
 						<td>
-						 | <a class="btn btn-outline-secondary btn-sm" href="http://localhost/AndikaKurniawan/PHPDasar/Hari-5/action/action_update.php?id=<?= $sult['customer_id']; ?>"><i class="fas fa-edit"></i> Edit</a> | <a class="btn btn-secondary btn-sm" href="http://localhost/AndikaKurniawan/PHPDasar/Hari-5/action/action_delete.php?id=<?= $sult['customer_id']; ?>" onclick="return confirm('Benar Data dihapus ?')"><i class="fas fa-trash-alt"></i> hapus</a></td>
+						 | <a class="btn btn-outline-secondary btn-sm" href="http://localhost/AndikaKurniawan/PHPDasar/Hari-5/action/customer/action_update.php?id=<?= $sult['customer_id']; ?>"><i class="fas fa-edit"></i> Edit</a> | <a class="btn btn-secondary btn-sm" href="http://localhost/AndikaKurniawan/PHPDasar/Hari-5/action/customer/action_delete.php?id=<?= $sult['customer_id']; ?>" onclick="return confirm('Benar Data dihapus ?')"><i class="fas fa-trash-alt"></i> hapus</a></td>
 					</tr>
 
 				<?php endforeach; ?>
@@ -51,4 +51,4 @@
 </div>
 
 
-<?php include '../include/footer.php' ?>
+<?php include '../../include/footer.php' ?>
